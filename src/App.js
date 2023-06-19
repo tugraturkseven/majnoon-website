@@ -1,8 +1,13 @@
 import Main from "./pages/Main";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <Main></Main>
+    <>
+      <Navbar></Navbar>
+      <Main></Main>
+    </>
+
   );
 }
 
