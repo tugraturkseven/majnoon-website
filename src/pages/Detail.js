@@ -4,6 +4,7 @@ import Stats from '../components/Stats'
 
 function Detail() {
     return (
+
         <div className='grid grid-rows-2 grid-flow-col gap-28 mx-32 h-48 justify-center'>
             <Carousel />
             <div className='col-span-2 row-span-1 mt-4 '>

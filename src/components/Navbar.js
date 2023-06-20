@@ -32,7 +32,7 @@ function Navbar() {
                             <span className="font-bold text-lg">8 Urun</span>
                             <span className="text-info">Toplam: 999 TL</span>
                             <div className="card-actions">
-                                <button className="btn btn-primary btn-block">Sepeti Gor</button>
+                                <a href='/basket' className="btn btn-primary btn-block">Sepeti Gor</a>
                             </div>
                         </div>
                     </div>
