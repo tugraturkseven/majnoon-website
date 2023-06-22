@@ -18,7 +18,7 @@ const images = importAll(require.context('../assets/tshirts/', false, /\.(jpg)$/
 function Carousel() {
 
     return (
-        <div className='ml-3 col-span-2 row-span-2 w-96'>
+        <div className='w-96'>
             <div className="carousel">
                 <div id="item1" className="carousel-item w-full">
                     <img src={images[0]} className="w-full" />
