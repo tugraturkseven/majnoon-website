@@ -3,21 +3,22 @@ import Table from '../components/Table'
 import Footer from '../components/Footer'
 
 function Basket() {
+
     return (
         <div className='grid grid-flow-row grid-cols-3'>
             <Table />
             <div className='col-span-1 flex-col px-10'>
-                <button className="btn btn-warning w-full mb-5">SIPARISI TAMAMLA</button>
+                <a href='/shipping' className="btn btn-warning w-full mb-5">SIPARISI TAMAMLA</a>
                 <div className='bg-neutral-content'>
                     <table className='table'>
                         <tbody>
                             <tr>
-                                <td className='font-semibold text-large'>👕 Urunun Toplami</td>
-                                <td >679.00 TL</td>
+                                <td className='font-semibold text-large text-neutral'>👕 Urunun Toplami</td>
+                                <td className='text-neutral' >679.00 TL</td>
                             </tr>
                             <tr>
-                                <td className='font-semibold text-large'>📦 Kargo Toplami</td>
-                                <td>19.00 TL</td>
+                                <td className='font-semibold text-large text-neutral'>📦 Kargo Toplami</td>
+                                <td className='text-neutral'>19.00 TL</td>
                             </tr>
                             <tr>
                                 <td className='font-semibold text-large'></td>
@@ -38,10 +39,7 @@ function Basket() {
                     </label>
                 </div>
 
-                <button className="btn btn-warning w-full mt-5">SIPARISI TAMAMLA</button>
-            </div>
-            <div className='col-span-3'>
-                <Footer ></Footer>
+                <a href='/shipping' className="btn btn-warning w-full mt-5">SIPARISI TAMAMLA</a>
             </div>
 
         </div>
