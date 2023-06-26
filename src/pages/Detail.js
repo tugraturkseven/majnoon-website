@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Carousel from '../components/Carousel'
 import Stats from '../components/Stats'
 import Comments from '../components/Comments'
@@ -20,7 +20,10 @@ function getComments() {
 
 function Detail() {
 
-    const comments = getComments();
+    const [comments, setComments] = useState([]);
+    useEffect(() => {
+        setComments(getComments());
+    }, [comments]);
 
     return (
         <div className='grid grid-cols-10'>
@@ -58,11 +61,14 @@ function Detail() {
             <div className='col-span-2'>
                 <Stats></Stats>
             </div>
-            <div className='col-span-10 '>
+            <div className='col-span-10'>
                 <h2 className='card-title justify-center items-center'>Yorumlar</h2>
-                {comments.map((item, index) => {
-                    return <Comments key={index} name={item.name} rate={item.rate} comment={item.comment} />
-                })}
+                <div className='flex flex-row flex-wrap items-center justify-center'>
+                    {comments.map((item, index) => {
+                        return <Comments key={index} name={item.name} rate={item.rate} comment={item.comment} />
+                    })}
+                </div>
+
             </div>
         </div>
 

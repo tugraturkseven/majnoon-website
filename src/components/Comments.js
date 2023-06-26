@@ -3,15 +3,15 @@ import React from 'react'
 function Comments(props) {
 
     return (
-        <div className="card w-full shadow-md">
+        <div className="card w-96 border-amber-600 border-2 m-5 col-span-1">
             <div className="card-body">
                 <h2 className="card-title">{props.name}</h2>
-                <div className="rating w-20">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked={props.rate === 1} />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked={props.rate === 2} />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked={props.rate === 3} />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked={props.rate === 4} />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked={props.rate === 5} />
+                <div className="rating rating-sm ">
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 hover:cursor-default" checked={props.rate === 4 ? true : false} disabled />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 hover:cursor-default" disabled />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 hover:cursor-default" disabled />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 hover:cursor-default" disabled />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 hover:cursor-default" disabled />
                 </div>
                 <p>{props.comment}</p>
             </div>
