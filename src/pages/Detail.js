@@ -1,8 +1,27 @@
 import React from 'react'
 import Carousel from '../components/Carousel'
 import Stats from '../components/Stats'
+import Comments from '../components/Comments'
+
+
+function getComments() {
+    const comArr = ['Tişörtü aldım ve gerçekten beğendim, tarzımı tam anlamıyla yansıtıyor.', 'Ürünün kalitesinden ve dikişlerin düzgünlüğünden çok memnun kaldım.', 'Teslimat süresi beklediğimden biraz daha uzun sürdü, biraz sabır gerektirdi.', 'Müşteri hizmetleri ekibi ile iletişim kurmak oldukça zor oldu, yanıtlar geç ve yetersizdi.', 'İndirimlerden faydalandım ve kaliteli bir ürünü uygun fiyata aldım.']
+    const nameArr = ['Mehmet Turkseven', 'Ahmet Yılmaz', 'Ayşe Yılmaz', 'Fatma Yılmaz', 'Mehmet Yılmaz'];
+    const rateArr = [4, 3, 3, 4, 5];
+    const returnArr = comArr.map((item, index) => {
+        return {
+            comment: item,
+            name: nameArr[index],
+            rate: rateArr[index]
+        }
+    });
+    return returnArr;
+}
 
 function Detail() {
+
+    const comments = getComments();
+
     return (
         <div className='grid grid-cols-10'>
             <div className='col-span-4 w-full pl-16'>
@@ -16,17 +35,17 @@ function Detail() {
                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
                 </div>
-                <div className="divider"></div>
+                <div className="divider w-96"></div>
                 <ul className='list-disc px-5'>
                     <li>15 gün içinde ücretsiz iade. Detaylı bilgi için tıklayın.</li>
                     <li>Erkek Slim Fit T-Shirt</li>
                     <li>Urun %100 pamukludur.</li>
                     <li>Model boy 185 kilo 75 urun bedeni XL'dir.</li>
                 </ul>
-                <div className="divider"></div>
+                <div className="divider w-96"></div>
                 <div className="join mt-5">
                     <input className="join-item btn" type="radio" name="options" aria-label="S" />
                     <input className="join-item btn" type="radio" name="options" aria-label="M" />
@@ -38,6 +57,12 @@ function Detail() {
 
             <div className='col-span-2'>
                 <Stats></Stats>
+            </div>
+            <div className='col-span-10 '>
+                <h2 className='card-title justify-center items-center'>Yorumlar</h2>
+                {comments.map((item, index) => {
+                    return <Comments key={index} name={item.name} rate={item.rate} comment={item.comment} />
+                })}
             </div>
         </div>
 

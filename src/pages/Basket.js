@@ -8,7 +8,7 @@ function Basket() {
         <div className='grid grid-flow-row grid-cols-3'>
             <Table />
             <div className='col-span-1 flex-col px-10'>
-                <a href='/shipping' className="btn btn-warning w-full mb-5">SIPARISI TAMAMLA</a>
+                <a href='/basketlogin' className="btn btn-warning w-full mb-5">SIPARISI TAMAMLA</a>
                 <div className='bg-neutral-content'>
                     <table className='table'>
                         <tbody>
@@ -39,7 +39,7 @@ function Basket() {
                     </label>
                 </div>
 
-                <a href='/shipping' className="btn btn-warning w-full mt-5">SIPARISI TAMAMLA</a>
+                <a href='/basketlogin' className="btn btn-warning w-full mt-5">SIPARISI TAMAMLA</a>
             </div>
 
         </div>

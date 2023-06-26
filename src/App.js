@@ -9,14 +9,14 @@ import ShippingLogin from "./pages/ShippingLogin";
 
 function App() {
   return (
-    <div className="min-h-screen" data-theme='dark'>
+    <div className="min-h-screen" data-theme='light'>
       <Navbar></Navbar>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path={"/details"} element={<Detail />} />
           <Route path={"/basket"} element={<Basket />} />
-          <Route path={'/shipping'} element={<ShippingLogin />}></Route>
+          <Route path={'/basketlogin'} element={<ShippingLogin />}></Route>
         </Routes>
       </BrowserRouter>
       <Footer></Footer>
